@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:windowBackground"
+    android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/symbols_selection" />
+
+    <TextView
+        android:id="@+id/tickersSymbolsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tickers_symbols"
+        android:textSize="16sp"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/beginGuide"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/symbolsTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/endGuide"
+        app:layout_constraintStart_toStartOf="@id/beginGuide"
+        app:layout_constraintTop_toBottomOf="@id/tickersSymbolsLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/symbolsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:layout_marginTop="2dp"
+            android:imeOptions="actionDone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/symbolsHintLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tickers_examples"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/symbolsTextInputLayout"
+        app:layout_constraintStart_toStartOf="@id/beginGuide" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/symbolsHintLabel"
+        app:layout_constraintEnd_toEndOf="@id/endGuide"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

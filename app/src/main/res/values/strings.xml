@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TestProj</string>
+    <string name="symbols_selection">Symbols Selection</string>
+    <string name="tickers_symbols">Tickers Symbols</string>
+    <string name="tickers_examples">E.G. GOOG, TSLA, LC…</string>
+    <string name="next">next</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="type_symbols">Please, type some symbols to search for</string>
+    <string name="coudnt_find_symbols">Sorry, we coudn\'t find any of the symbols you had specified</string>
+    <string name="coudnt_acquire_symbols">Sorry, something went wrong during symbols receiving</string>
+
+    <string name="symbol_description_placeholder">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pretium varius suscipit. Etiam in risus cursus, congue ligula in, tincidunt turpis. In rhoncus hendrerit nisl, a pellentesque risus. Duis egestas luctus orci, nec sollicitudin diam commodo a. Cras magna mi, sagittis eget leo eu, eleifend cursus tellus. Vestibulum dictum rhoncus consectetur. Cras vestibulum eros mi, et feugiat dui ullamcorper accumsan. Proin purus neque, posuere nec mi quis, ultricies dignissim augue. Praesent ac blandit sapien. Aenean rutrum eu ex ut vulputate. Quisque et vulputate turpis. Cras pharetra nisl dui. Nunc euismod congue ipsum vel suscipit. Sed tristique nunc ante, ut maximus enim convallis eu. Vivamus sit amet metus porttitor nisl auctor iaculis. Etiam vitae iaculis risus, quis dignissim lacus.\n\n
+        Sed nec aliquet leo. Proin porttitor ornare tempor. Ut ipsum ante, rhoncus id ligula vel, posuere aliquet purus. Nulla accumsan sem quam, ac blandit quam egestas id. Donec metus diam, maximus eget turpis nec, congue auctor nunc. Praesent luctus nulla eros, blandit placerat augue lobortis ut. Vivamus at sem nec erat placerat tristique ut nec orci. Nam consectetur elit sed odio faucibus bibendum. Maecenas tincidunt aliquet magna, vel euismod ante rutrum eu. Mauris sodales dui quis hendrerit tempor.\n\n
+        Nullam blandit erat sed est dignissim semper et ac ex. In sem magna, feugiat vel dolor cursus, volutpat tristique nisl. Pellentesque rhoncus turpis ac justo semper tincidunt. Phasellus cursus posuere turpis, eu tincidunt lectus tempus nec. Pellentesque porttitor ligula neque, eu pharetra lorem vulputate sed. Nulla ultricies purus libero, ac tincidunt ligula imperdiet eget. Cras quam lorem, imperdiet id ultrices a, semper in metus. Morbi eleifend a metus vitae commodo. Maecenas pulvinar rhoncus tortor, quis porttitor felis dignissim faucibus. Proin dui orci, tempus eget condimentum sed, vestibulum sed orci. Sed vulputate velit vitae magna condimentum, in gravida nunc sodales.\n\n
+        Donec maximus augue at sagittis viverra. Nullam suscipit maximus cursus. Etiam volutpat mollis finibus. Suspendisse metus diam, tempus vehicula suscipit a, viverra vitae erat. Morbi accumsan ex lobortis enim interdum eleifend. Nullam varius molestie imperdiet. Morbi est tortor, posuere sit amet velit at, volutpat maximus enim. Sed sed purus enim.\n\n
+        Pellentesque pellentesque lectus orci, tristique porta neque dictum eget. Nullam pellentesque arcu eu posuere accumsan. Etiam malesuada sem nec magna mattis, eu pretium tortor egestas. Ut consequat justo sit amet eros vehicula dictum. Nullam blandit, purus eget elementum auctor, odio mi sodales turpis, eget gravida metus erat in massa. Duis vehicula aliquet blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean auctor, metus ut bibendum bibendum, velit eros condimentum neque, a vehicula libero ante ac ante. Vestibulum accumsan libero a elit auctor varius. Sed a maximus libero.\n\n
+    </string>
+    <string name="chart">Chart</string>
+
+</resources>
