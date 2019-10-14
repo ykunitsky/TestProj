@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.antonpopoff.testproj.R
-import com.antonpopoff.testproj.data.models.ApiStock
+import com.antonpopoff.testproj.presentation.portfolio.models.Stock
 import com.antonpopoff.testproj.utils.listeners.ItemClickListener
 
-class SymbolsAdapter(var symbols: List<ApiStock> = emptyList()) : RecyclerView.Adapter<SymbolViewHolder>() {
+class SymbolsAdapter(var symbols: List<Stock> = emptyList()) : RecyclerView.Adapter<SymbolViewHolder>() {
 
     var clickListener: ItemClickListener? = null
 

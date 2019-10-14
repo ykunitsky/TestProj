@@ -2,21 +2,19 @@ package com.antonpopoff.testproj.presentation.portfolio
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.antonpopoff.testproj.R
-import com.antonpopoff.testproj.data.models.ApiStock
+import com.antonpopoff.testproj.data.models.stocks.ApiStock
 import com.antonpopoff.testproj.presentation.common.BaseViewFragment
 import com.antonpopoff.testproj.presentation.portfolio.adapter.SymbolsAdapter
+import com.antonpopoff.testproj.presentation.portfolio.models.Stock
 import com.antonpopoff.testproj.presentation.symboldetails.SymbolDetailsFragment
-import com.antonpopoff.testproj.utils.viewstate.ViewState
-import com.antonpopoff.testproj.utils.viewstate.ViewStateUpdater
+import com.antonpopoff.testproj.utils.extensions.android.goneUnless
+import com.antonpopoff.testproj.utils.viewstate.*
 import kotlinx.android.synthetic.main.fragment_portfolio.*
 import moxy.ktx.moxyPresenter
 
 class PortfolioFragment : BaseViewFragment(R.layout.fragment_portfolio), PortfolioView {
-
-    private lateinit var viewStateUpdater: ViewStateUpdater
 
     private val presenter by moxyPresenter { createPresenter() }
 
@@ -24,7 +22,6 @@ class PortfolioFragment : BaseViewFragment(R.layout.fragment_portfolio), Portfol
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewStateUpdater = ViewStateUpdater(symbolsRecycler, emptyView, loadingView, errorView)
         setupToolbar()
         setupSymbolsRecycler()
     }
@@ -39,18 +36,26 @@ class PortfolioFragment : BaseViewFragment(R.layout.fragment_portfolio), Portfol
         symbolsRecycler.adapter = SymbolsAdapter().apply { clickListener = presenter::onSymbolClick }
     }
 
-    override fun bindSymbols(symbols: List<ApiStock>) {
+    override fun renderStocksModel(model: Model<List<Stock>>) {
+        if (model is Data<List<Stock>>) showStocksList(model.data)
+        updateViewState(model)
+    }
+
+    private fun showStocksList(symbols: List<Stock>) {
         (symbolsRecycler.adapter as? SymbolsAdapter)?.also {
             it.symbols = symbols
             it.notifyDataSetChanged()
         }
     }
 
-    override fun updateSymbolsViewState(state: ViewState) {
-        viewStateUpdater.update(state)
+    private fun updateViewState(model: Model<*>) {
+        symbolsRecycler?.goneUnless(model is Data)
+        emptyView?.goneUnless(model is Empty)
+        loadingView?.goneUnless(model is Loading)
+        errorView?.goneUnless(model is Error)
     }
 
-    override fun showSymbolDetails(symbol: ApiStock) {
+    override fun showSymbolDetails(symbol: Stock) {
         pushFragment(R.id.fragmentsContainer, SymbolDetailsFragment.create(symbol))
     }
 

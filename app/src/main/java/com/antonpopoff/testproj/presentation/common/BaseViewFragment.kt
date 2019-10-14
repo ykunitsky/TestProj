@@ -3,6 +3,7 @@ package com.antonpopoff.testproj.presentation.common
 import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.FragmentTransaction
+import com.antonpopoff.testproj.R
 import com.antonpopoff.testproj.utils.softinput.SoftInputMethod
 import moxy.MvpAppCompatFragment
 

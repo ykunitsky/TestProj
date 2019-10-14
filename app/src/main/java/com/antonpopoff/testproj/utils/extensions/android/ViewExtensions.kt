@@ -1,4 +1,4 @@
-package com.antonpopoff.testproj.utils.extensions
+package com.antonpopoff.testproj.utils.extensions.android
 
 import android.view.View
 
