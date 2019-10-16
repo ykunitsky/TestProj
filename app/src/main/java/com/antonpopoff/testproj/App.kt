@@ -9,10 +9,6 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        setupKoin()
-    }
-
-    private fun setupKoin() {
         startKoin { modules(listOf(apiModule, repositoryModule)) }
     }
 }

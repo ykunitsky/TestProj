@@ -2,8 +2,6 @@ package com.antonpopoff.testproj.presentation.symbolsselection
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.antonpopoff.testproj.R
 import com.antonpopoff.testproj.presentation.common.BaseViewFragment
 import com.antonpopoff.testproj.presentation.portfolio.PortfolioFragment
